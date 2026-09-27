@@ -21,8 +21,14 @@
             </div>
             <span class="text-xs font-mono text-slate-400">bash — etwinning-cli@mind-body-lab:~</span>
         </div>
-        <div class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-emerald-400 border border-slate-700">
-            status: active & deployed
+        <div class="flex items-center space-x-3">
+            <div id="lang-switcher" class="flex bg-slate-800 border border-slate-700 rounded-lg p-0.5 text-xs font-mono">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2.5 py-1 rounded bg-emerald-600 text-white font-bold transition">EN</button>
+                <button onclick="setLanguage('tr')" id="btn-tr" class="px-2.5 py-1 rounded text-slate-300 transition">TR</button>
+            </div>
+            <div class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-emerald-400 border border-slate-700 hidden sm:block">
+                status: active & deployed
+            </div>
         </div>
     </header>
 
@@ -35,16 +41,16 @@
                 </div>
                 <div>
                     <span class="font-bold text-lg text-slate-900 tracking-tight block">Mind & Body Balance Lab</span>
-                    <span class="text-xs text-emerald-600 font-medium">eTwinning Project (Oct – May)</span>
+                    <span class="text-xs text-emerald-600 font-medium" data-translate="sub-title">eTwinning Project (Oct – May)</span>
                 </div>
             </div>
             <div class="flex flex-wrap gap-2 mt-2 sm:mt-0" id="nav-tabs">
-                <button onclick="switchTab('home')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
-                <button onclick="switchTab('about')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
-                <button onclick="switchTab('roadmap')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
-                <button onclick="switchTab('people')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">People & Partners</button>
-                <button onclick="switchTab('activities')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
-                <button onclick="switchTab('contact')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
+                <button onclick="switchTab('home')" data-translate="nav-home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
+                <button onclick="switchTab('about')" data-translate="nav-about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
+                <button onclick="switchTab('roadmap')" data-translate="nav-roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
+                <button onclick="switchTab('people')" data-translate="nav-people" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">People & Partners</button>
+                <button onclick="switchTab('activities')" data-translate="nav-activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
+                <button onclick="switchTab('contact')" data-translate="nav-contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
             </div>
         </div>
     </nav>
@@ -56,33 +62,33 @@
         <div id="tab-home" class="tab-content space-y-8">
             <div class="bg-gradient-to-r from-emerald-800 to-teal-900 rounded-2xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between">
                 <div class="max-w-xl space-y-4">
-                    <span class="bg-emerald-700/60 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">International Collaboration</span>
+                    <span class="bg-emerald-700/60 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30" data-translate="badge-collab">International Collaboration</span>
                     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Mind & Body Balance Lab</h1>
-                    <p class="text-emerald-100 text-base md:text-lg">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
+                    <p class="text-emerald-100 text-base md:text-lg" data-translate="home-desc">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
                     <div class="pt-4 flex gap-3">
-                        <button onclick="switchTab('about')" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
-                        <button onclick="switchTab('people')" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
+                        <button onclick="switchTab('about')" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
+                        <button onclick="switchTab('people')" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
                     </div>
                 </div>
                 <div class="mt-8 md:mt-0 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
-                    <p class="text-xs font-mono uppercase tracking-widest text-emerald-300">Project Timeline</p>
-                    <p class="text-2xl font-bold mt-1">October – May</p>
-                    <p class="text-xs text-emerald-200 mt-2">8 Months of Active Wellbeing</p>
+                    <p class="text-xs font-mono uppercase tracking-widest text-emerald-300" data-translate="timeline-label">Project Timeline</p>
+                    <p class="text-2xl font-bold mt-1" data-translate="timeline-val">October – May</p>
+                    <p class="text-xs text-emerald-200 mt-2" data-translate="timeline-sub">8 Months of Active Wellbeing</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Authors & Team</h3>
-                    <p class="text-sm text-slate-600">Co-authored by Matea Mihaljević (Founder) and Mediha Tabak (Co-founder, Haydarpaşa Lisesi).</p>
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2" data-translate="card1-title">Authors & Team</h3>
+                    <p class="text-sm text-slate-600" data-translate="card1-desc">Co-authored by Matea Mihaljević (Founder) and Mediha Tabak (Co-founder, Haydarpaşa High School).</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Student Wellbeing Toolkit</h3>
-                    <p class="text-sm text-slate-600">The final tangible outcome containing evidence-informed, student-friendly micro-interventions.</p>
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2" data-translate="card2-title">Student Wellbeing Toolkit</h3>
+                    <p class="text-sm text-slate-600" data-translate="card2-desc">The final tangible outcome containing evidence-informed, student-friendly micro-interventions.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Safe & Voluntary</h3>
-                    <p class="text-sm text-slate-600">All activities respect personal boundaries, avoiding diagnosis disclosures or private health data.</p>
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2" data-translate="card3-title">Safe & Voluntary</h3>
+                    <p class="text-sm text-slate-600" data-translate="card3-desc">All activities respect personal boundaries, avoiding diagnosis disclosures or private health data.</p>
                 </div>
             </div>
         </div>
@@ -90,21 +96,21 @@
         <!-- ABOUT TAB -->
         <div id="tab-about" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900">Background & Objectives</h2>
-                <p class="text-slate-700 leading-relaxed">The project “Mind & Body Balance Lab” is designed as an international collaboration between secondary schools focused on exploring the relationship between mental health and healthy lifestyle habits among adolescents. Through joint activities, students analyse how everyday routines such as sleep, nutrition, physical activity, and digital media influence emotional state, stress levels, and overall well-being.</p>
+                <h2 class="text-2xl font-bold text-slate-900" data-translate="about-title">Background & Objectives</h2>
+                <p class="text-slate-700 leading-relaxed" data-translate="about-text">The project “Mind & Body Balance Lab” is designed as an international collaboration between secondary schools focused on exploring the relationship between mental health and healthy lifestyle habits among adolescents. Through joint activities, students analyse how everyday routines such as sleep, nutrition, physical activity, and digital media influence emotional state, stress levels, and overall well-being.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                     <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-                        <h3 class="font-bold text-emerald-900 text-lg mb-2">Overall Aim</h3>
-                        <p class="text-sm text-emerald-800">To develop students’ awareness, knowledge, and skills for protecting mental health through the adoption of healthy lifestyle habits, strengthening emotional and social competences, and reducing stigma.</p>
+                        <h3 class="font-bold text-emerald-900 text-lg mb-2" data-translate="aim-overall-title">Overall Aim</h3>
+                        <p class="text-sm text-emerald-800" data-translate="aim-overall-desc">To develop students’ awareness, knowledge, and skills for protecting mental health through the adoption of healthy lifestyle habits, strengthening emotional and social competences, and reducing stigma.</p>
                     </div>
                     <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
-                        <h3 class="font-bold text-teal-900 text-lg mb-2">Specific Aims</h3>
+                        <h3 class="font-bold text-teal-900 text-lg mb-2" data-translate="aim-spec-title">Specific Aims</h3>
                         <ul class="text-sm text-teal-800 space-y-2 list-disc list-inside">
-                            <li>Distinguish scientific information from myths regarding mental health.</li>
-                            <li>Analyze connection between sleep, nutrition, physical activity, and well-being.</li>
-                            <li>Apply stress-management strategies and micro-interventions.</li>
-                            <li>Collaborate in international teams using digital tools.</li>
+                            <li data-translate="aim1">Distinguish scientific information from myths regarding mental health.</li>
+                            <li data-translate="aim2">Analyze connection between sleep, nutrition, physical activity, and well-being.</li>
+                            <li data-translate="aim3">Apply stress-management strategies and micro-interventions.</li>
+                            <li data-translate="aim4">Collaborate in international teams using digital tools.</li>
                         </ul>
                     </div>
                 </div>
@@ -114,47 +120,47 @@
         <!-- ROADMAP TAB -->
         <div id="tab-roadmap" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">8-Phase Project Roadmap (October → May)</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6" data-translate="roadmap-title">8-Phase Project Roadmap (October → May)</h2>
                 <div class="space-y-4">
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">October</span>
-                        <h3 class="font-bold text-slate-800">Phase 1: Project launch and mental health literacy</h3>
-                        <p class="text-sm text-slate-600">Meet partners, complete baseline surveys, explore mental health concepts and myths.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p1-title">Phase 1: Project launch and mental health literacy</h3>
+                        <p class="text-sm text-slate-600" data-translate="p1-desc">Meet partners, complete baseline surveys, explore mental health concepts and myths.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">November</span>
-                        <h3 class="font-bold text-slate-800">Phase 2: Sleep and mental wellbeing</h3>
-                        <p class="text-sm text-slate-600">Investigate sleep, concentration, and mood; develop healthy sleep habits.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p2-title">Phase 2: Sleep and mental wellbeing</h3>
+                        <p class="text-sm text-slate-600" data-translate="p2-desc">Investigate sleep, concentration, and mood; develop healthy sleep habits.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">December</span>
-                        <h3 class="font-bold text-slate-800">Phase 3: Nutrition and physical activity</h3>
-                        <p class="text-sm text-slate-600">Explore lifestyle and wellbeing; create practical healthy habit resources.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p3-title">Phase 3: Nutrition and physical activity</h3>
+                        <p class="text-sm text-slate-600" data-translate="p3-desc">Explore lifestyle and wellbeing; create practical healthy habit resources.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">January</span>
-                        <h3 class="font-bold text-slate-800">Phase 4: Stress management and emotional regulation</h3>
-                        <p class="text-sm text-slate-600">Learn and practise micro-interventions, emotional awareness, and coping strategies.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p4-title">Phase 4: Stress management and emotional regulation</h3>
+                        <p class="text-sm text-slate-600" data-translate="p4-desc">Learn and practise micro-interventions, emotional awareness, and coping strategies.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">February</span>
-                        <h3 class="font-bold text-slate-800">Phase 5: Digital balance and social wellbeing</h3>
-                        <p class="text-sm text-slate-600">Reflect on digital habits, social connection, and healthy boundaries.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p5-title">Phase 5: Digital balance and social wellbeing</h3>
+                        <p class="text-sm text-slate-600" data-translate="p5-desc">Reflect on digital habits, social connection, and healthy boundaries.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">March</span>
-                        <h3 class="font-bold text-slate-800">Phase 6: International teamwork and toolkit creation</h3>
-                        <p class="text-sm text-slate-600">Combine partner contributions and draft the Student Wellbeing Toolkit.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p6-title">Phase 6: International teamwork and toolkit creation</h3>
+                        <p class="text-sm text-slate-600" data-translate="p6-desc">Combine partner contributions and draft the Student Wellbeing Toolkit.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">April</span>
-                        <h3 class="font-bold text-slate-800">Phase 7: Mental health awareness campaign</h3>
-                        <p class="text-sm text-slate-600">Produce posters, digital campaign materials, and dissemination activities.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p7-title">Phase 7: Mental health awareness campaign</h3>
+                        <p class="text-sm text-slate-600" data-translate="p7-desc">Produce posters, digital campaign materials, and dissemination activities.</p>
                     </div>
                     <div class="border-l-4 border-emerald-600 pl-4 py-2">
                         <span class="text-xs font-bold text-emerald-600 uppercase">May</span>
-                        <h3 class="font-bold text-slate-800">Phase 8: Finalisation, evaluation and celebration</h3>
-                        <p class="text-sm text-slate-600">Complete the toolkit, evaluate learning, share results, and close the project.</p>
+                        <h3 class="font-bold text-slate-800" data-translate="p8-title">Phase 8: Finalisation, evaluation and celebration</h3>
+                        <p class="text-sm text-slate-600" data-translate="p8-desc">Complete the toolkit, evaluate learning, share results, and close the project.</p>
                     </div>
                 </div>
             </div>
@@ -163,30 +169,30 @@
         <!-- PEOPLE & PARTNERS TAB -->
         <div id="tab-people" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900">Project Team & Partner Schools</h2>
+                <h2 class="text-2xl font-bold text-slate-900" data-translate="people-title">Project Team & Partner Schools</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Founder</span>
+                        <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold" data-translate="role-founder">Founder</span>
                         <h3 class="font-bold text-slate-900">Matea Mihaljević</h3>
                         <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
                     </div>
                     <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold">Co-founder</span>
+                        <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold" data-translate="role-cofounder">Co-founder</span>
                         <h3 class="font-bold text-slate-900">Mediha Tabak</h3>
-                        <p class="text-xs text-slate-500">Haydarpaşa Lisesi, Üsküdar, Türkiye</p>
+                        <p class="text-xs text-slate-500">Haydarpaşa High School, Üsküdar, Türkiye</p>
                     </div>
                     <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
                         <h3 class="font-bold text-slate-900">Elvan Bakırcı Pekel</h3>
-                        <p class="text-xs text-slate-500">Didim Yenihisar Anadolu Lisesi, Didim, Türkiye</p>
+                        <p class="text-xs text-slate-500">Didim Yenihisar Anatolian High School, Didim, Türkiye</p>
                     </div>
                     <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
                         <h3 class="font-bold text-slate-900">Milena Rakić</h3>
                         <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
                     </div>
                     <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
                         <h3 class="font-bold text-slate-900">Matea Oršulić</h3>
                         <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
                     </div>
@@ -197,20 +203,20 @@
         <!-- ACTIVITIES TAB -->
         <div id="tab-activities" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900">Project Activities & Workshop Logs</h2>
-                <p class="text-slate-600">Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.</p>
+                <h2 class="text-2xl font-bold text-slate-900" data-translate="act-title">Project Activities & Workshop Logs</h2>
+                <p class="text-slate-600" data-translate="act-sub">Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.</p>
                 <div class="space-y-4">
                     <div class="p-4 border rounded-xl bg-slate-50">
-                        <h3 class="font-bold text-emerald-800">October: Mental Health Literacy & Baseline Surveys</h3>
-                        <p class="text-sm text-slate-600 mt-1">Online welcome meetings, baseline surveys, and international myth-or-fact collaborative wall (Padlet).</p>
+                        <h3 class="font-bold text-emerald-800" data-translate="act1-title">October: Mental Health Literacy & Baseline Surveys</h3>
+                        <p class="text-sm text-slate-600 mt-1" data-translate="act1-desc">Online welcome meetings, baseline surveys, and international myth-or-fact collaborative wall (Padlet).</p>
                     </div>
                     <div class="p-4 border rounded-xl bg-slate-50">
-                        <h3 class="font-bold text-emerald-800">November: Sleep & Mental Wellbeing</h3>
-                        <p class="text-sm text-slate-600 mt-1">Researching sleep science, creating international sleep-habits infographics and toolkits.</p>
+                        <h3 class="font-bold text-emerald-800" data-translate="act2-title">November: Sleep & Mental Wellbeing</h3>
+                        <p class="text-sm text-slate-600 mt-1" data-translate="act2-desc">Researching sleep science, creating international sleep-habits infographics and toolkits.</p>
                     </div>
                     <div class="p-4 border rounded-xl bg-slate-50">
-                        <h3 class="font-bold text-emerald-800">December: Nutrition & Physical Activity</h3>
-                        <p class="text-sm text-slate-600 mt-1">Practical movement habits, avoiding calorie counting, and designing digital infographics.</p>
+                        <h3 class="font-bold text-emerald-800" data-translate="act3-title">December: Nutrition & Physical Activity</h3>
+                        <p class="text-sm text-slate-600 mt-1" data-translate="act3-desc">Practical movement habits, avoiding calorie counting, and designing digital infographics.</p>
                     </div>
                 </div>
             </div>
@@ -219,13 +225,13 @@
         <!-- CONTACT TAB -->
         <div id="tab-contact" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6 max-w-2xl mx-auto text-center">
-                <h2 class="text-2xl font-bold text-slate-900">Contact & Project Channels</h2>
-                <p class="text-slate-600">Get in touch with the project coordinators or explore our partner schools.</p>
+                <h2 class="text-2xl font-bold text-slate-900" data-translate="contact-title">Contact & Project Channels</h2>
+                <p class="text-slate-600" data-translate="contact-sub">Get in touch with the project coordinators or explore our partner schools.</p>
                 <div class="p-6 bg-emerald-50 rounded-xl border border-emerald-100 inline-block w-full">
-                    <p class="text-sm font-semibold text-emerald-900">Official eTwinning Contact Email:</p>
+                    <p class="text-sm font-semibold text-emerald-900" data-translate="contact-email-label">Official eTwinning Contact Email:</p>
                     <a href="mailto:etwinninghpl2025@gmail.com" class="text-emerald-700 font-bold text-lg hover:underline block mt-1">etwinninghpl2025@gmail.com</a>
                 </div>
-                <p class="text-xs text-slate-500">Haydarpaşa Lisesi — Üsküdar, İstanbul / SŠ Tina Ujevića — Vrgorac, Croatia</p>
+                <p class="text-xs text-slate-500" data-translate="contact-schools">Haydarpaşa High School — Üsküdar, İstanbul / Didim Yenihisar Anatolian High School / SŠ Tina Ujevića — Vrgorac, Croatia</p>
             </div>
         </div>
 
@@ -233,12 +239,165 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-6 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500" data-translate="footer-text">
             © 2026 Mind & Body Balance Lab | eTwinning Project. All rights reserved.
         </div>
     </footer>
 
     <script>
+        const translations = {
+            en: {
+                "sub-title": "eTwinning Project (Oct – May)",
+                "nav-home": "Home",
+                "nav-about": "About & Aims",
+                "nav-roadmap": "Roadmap",
+                "nav-people": "People & Partners",
+                "nav-activities": "Activities",
+                "nav-contact": "Contact",
+                "badge-collab": "International Collaboration",
+                "home-desc": "Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.",
+                "btn-explore": "Explore Project",
+                "btn-partners": "Meet Partners",
+                "timeline-label": "Project Timeline",
+                "timeline-val": "October – May",
+                "timeline-sub": "8 Months of Active Wellbeing",
+                "card1-title": "Authors & Team",
+                "card1-desc": "Co-authored by Matea Mihaljević (Founder) and Mediha Tabak (Co-founder, Haydarpaşa High School).",
+                "card2-title": "Student Wellbeing Toolkit",
+                "card2-desc": "The final tangible outcome containing evidence-informed, student-friendly micro-interventions.",
+                "card3-title": "Safe & Voluntary",
+                "card3-desc": "All activities respect personal boundaries, avoiding diagnosis disclosures or private health data.",
+                "about-title": "Background & Objectives",
+                "about-text": "The project “Mind & Body Balance Lab” is designed as an international collaboration between secondary schools focused on exploring the relationship between mental health and healthy lifestyle habits among adolescents. Through joint activities, students analyse how everyday routines such as sleep, nutrition, physical activity, and digital media influence emotional state, stress levels, and overall well-being.",
+                "aim-overall-title": "Overall Aim",
+                "aim-overall-desc": "To develop students’ awareness, knowledge, and skills for protecting mental health through the adoption of healthy lifestyle habits, strengthening emotional and social competences, and reducing stigma.",
+                "aim-spec-title": "Specific Aims",
+                "aim1": "Distinguish scientific information from myths regarding mental health.",
+                "aim2": "Analyze connection between sleep, nutrition, physical activity, and well-being.",
+                "aim3": "Apply stress-management strategies and micro-interventions.",
+                "aim4": "Collaborate in international teams using digital tools.",
+                "roadmap-title": "8-Phase Project Roadmap (October → May)",
+                "p1-title": "Phase 1: Project launch and mental health literacy",
+                "p1-desc": "Meet partners, complete baseline surveys, explore mental health concepts and myths.",
+                "p2-title": "Phase 2: Sleep and mental wellbeing",
+                "p2-desc": "Investigate sleep, concentration, and mood; develop healthy sleep habits.",
+                "p3-title": "Phase 3: Nutrition and physical activity",
+                "p3-desc": "Explore lifestyle and wellbeing; create practical healthy habit resources.",
+                "p4-title": "Phase 4: Stress management and emotional regulation",
+                "p4-desc": "Learn and practise micro-interventions, emotional awareness, and coping strategies.",
+                "p5-title": "Phase 5: Digital balance and social wellbeing",
+                "p5-desc": "Reflect on digital habits, social connection, and healthy boundaries.",
+                "p6-title": "Phase 6: International teamwork and toolkit creation",
+                "p6-desc": "Combine partner contributions and draft the Student Wellbeing Toolkit.",
+                "p7-title": "Phase 7: Mental health awareness campaign",
+                "p7-desc": "Produce posters, digital campaign materials, and dissemination activities.",
+                "p8-title": "Phase 8: Finalisation, evaluation and celebration",
+                "p8-desc": "Complete the toolkit, evaluate learning, share results, and close the project.",
+                "people-title": "Project Team & Partner Schools",
+                "role-founder": "Founder",
+                "role-cofounder": "Co-founder",
+                "role-member": "Member",
+                "act-title": "Project Activities & Workshop Logs",
+                "act-sub": "Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.",
+                "act1-title": "October: Mental Health Literacy & Baseline Surveys",
+                "act1-desc": "Online welcome meetings, baseline surveys, and international myth-or-fact collaborative wall (Padlet).",
+                "act2-title": "November: Sleep & Mental Wellbeing",
+                "act2-desc": "Researching sleep science, creating international sleep-habits infographics and toolkits.",
+                "act3-title": "December: Nutrition & Physical Activity",
+                "act3-desc": "Practical movement habits, avoiding calorie counting, and designing digital infographics.",
+                "contact-title": "Contact & Project Channels",
+                "contact-sub": "Get in touch with the project coordinators or explore our partner schools.",
+                "contact-email-label": "Official eTwinning Contact Email:",
+                "contact-schools": "Haydarpaşa High School — Üsküdar, İstanbul / Didim Yenihisar Anatolian High School / SŠ Tina Ujevića — Vrgorac, Croatia",
+                "footer-text": "© 2026 Mind & Body Balance Lab | eTwinning Project. All rights reserved."
+            },
+            tr: {
+                "sub-title": "eTwinning Projesi (Ekim – Mayıs)",
+                "nav-home": "Ana Sayfa",
+                "nav-about": "Hakkında & Amaçlar",
+                "nav-roadmap": "Yol Haritası",
+                "nav-people": "Ortaklar & Ekip",
+                "nav-activities": "Aktiviteler",
+                "nav-contact": "İletişim",
+                "badge-collab": "Uluslararası İş Birliği",
+                "home-desc": "Ergenler arasında ruh sağlığı, duygusal iyilik hali ve sağlıklı yaşam alışkanlıkları arasındaki ilişkiyi araştırma, dijital araçlar ve yaratıcı üretim yoluyla inceliyoruz.",
+                "btn-explore": "Projeyi İncele",
+                "btn-partners": "Ortaklarla Tanış",
+                "timeline-label": "Proje Takvimi",
+                "timeline-val": "Ekim – Mayıs",
+                "timeline-sub": "8 Aylık Aktif İyilik Hali",
+                "card1-title": "Yazarlar & Ekip",
+                "card1-desc": "Matea Mihaljević (Kurucu) ve Mediha Tabak (Kurucu Ortak, Haydarpaşa High School) tarafından ortaklaşa yürütülmektedir.",
+                "card2-title": "Öğrenci İyilik Hali Araç Kiti",
+                "card2-desc": "Kanıta dayalı, öğrenci dostu mikro müdahaleler içeren ortak nihai somut ürün.",
+                "card3-title": "Güvenli ve Gönüllü",
+                "card3-desc": "Tüm etkinlikler kişisel sınırları gözetir, tanı açıklamalarından ve özel sağlık verilerinden kaçınır.",
+                "about-title": "Arka Plan & Hedefler",
+                "about-text": "“Mind & Body Balance Lab” projesi, ergenler arasında ruh sağlığı ile sağlıklı yaşam alışkanlıkları arasındaki bağı keşfetmeye odaklanan liseler arası uluslararası bir iş birliğidir. Ortak etkinlikler aracılığıyla öğrenciler uyku, beslenme, fiziksel aktivite ve dijital medya gibi günlük rutinlerin duygusal durumu, stres seviyelerini ve genel refahı nasıl etkilediğini analiz eder.",
+                "aim-overall-title": "Genel Amaç",
+                "aim-overall-desc": "Öğrencilerin sağlıklı yaşam alışkanlıkları edinerek ruh sağlığını koruma konusundaki farkındalık, bilgi ve becerilerini geliştirmek, duygusal ve sosyal yetkinliklerini güçlendirmek ve ruh sağlığı damgalanmasını azaltmak.",
+                "aim-spec-title": "Özel Amaçlar",
+                "aim1": "Ruh sağlığıyla ilgili bilimsel bilgileri mitlerden ayırt etmek.",
+                "aim2": "Uyku, beslenme, fiziksel aktivite ve ruhsal iyilik hali arasındaki bağlantıyı analiz etmek.",
+                "aim3": "Stres yönetimi stratejilerini ve mikro müdahaleleri uygulamak.",
+                "aim4": "Uluslararası takımlarda dijital araçları kullanarak iş birliği yapmak.",
+                "roadmap-title": "8 Aşamalı Proje Yol Haritası (Ekim → Mayıs)",
+                "p1-title": "Faz 1: Proje başlangıcı ve ruh sağlığı okuryazarlığı",
+                "p1-desc": "Ortaklarla tanışma, başlangıç anketlerini tamamlama, ruh sağlığı kavramlarını ve mitleri keşfetme.",
+                "p2-title": "Faz 2: Uyku ve ruhsal iyilik hali",
+                "p2-desc": "Uykuyu, konsantrasyonu ve ruh halini araştırma; sağlıklı uyku alışkanlıkları geliştirme.",
+                "p3-title": "Faz 3: Beslenme ve fiziksel aktivite",
+                "p3-desc": "Yaşam tarzı ve refahı keşfetme; pratik sağlıklı alışkanlık kaynakları oluşturma.",
+                "p4-title": "Faz 4: Stres yönetimi ve duygu düzenleme",
+                "p4-desc": "Mikro müdahaleleri, duygusal farkındalığı ve başa çıkma stratejilerini öğrenme ve uygulama.",
+                "p5-title": "Faz 5: Dijital denge ve sosyal refah",
+                "p5-desc": "Dijital alışkanlıklar, sosyal bağlantılar ve sağlıklı sınırlar üzerine yansıtma yapma.",
+                "p6-title": "Faz 6: Uluslararası ekip çalışması ve araç kiti oluşturma",
+                "p6-desc": "Ortak katkılarını birleştirme ve Öğrenci İyilik Hali Araç Kiti taslağını hazırlama.",
+                "p7-title": "Faz 7: Ruh sağlığı farkındalık kampanyası",
+                "p7-desc": "Posterler, dijital kampanya materyalleri üretme ve yaygınlaştırma etkinlikleri düzenleme.",
+                "p8-title": "Faz 8: Tamamlama, değerlendirme ve kutlama",
+                "p8-desc": "Araç kitini tamamlama, öğrenmeyi değerlendirme, sonuçları paylaşma ve projeyi kapatma.",
+                "people-title": "Proje Ekibi & Ortak Okullar",
+                "role-founder": "Kurucu",
+                "role-cofounder": "Kurucu Ortak",
+                "role-member": "Üye",
+                "act-title": "Proje Aktiviteleri & Çalıştay Kayıtları",
+                "act-sub": "İş birliğine dayalı etkinliklerimiz, ortak okullar arası asenkron görevleri okul temelli pratik oturumlarla birleştirir.",
+                "act1-title": "Ekim: Ruh Sağlığı Okuryazarlığı ve Başlangıç Anketleri",
+                "act1-desc": "Çevrim içi tanışma toplantıları, başlangıç anketleri ve uluslararası mit-gerçek ortak duvarı (Padlet).",
+                "act2-title": "Kasım: Uyku ve Ruhsal İyilik Hali",
+                "act2-desc": "Uyku bilimini araştırma, uluslararası uyku alışkanlıkları infografikleri ve araç kiti hazırlama.",
+                "act3-title": "Aralık: Beslenme ve Fiziksel Aktivite",
+                "act3-desc": "Pratik hareket alışkanlıkları kazanma, kalori sayımından kaçınma ve dijital infografikler tasarlama.",
+                "contact-title": "İletişim & Proje Kanalları",
+                "contact-sub": "Proje koordinatörleriyle iletişime geçin veya ortak okullarımızı inceleyin.",
+                "contact-email-label": "Resmi eTwinning İletişim E-postası:",
+                "contact-schools": "Haydarpaşa High School — Üsküdar, İstanbul / Didim Yenihisar Anatolian High School / SŠ Tina Ujevića — Vrgorac, Hırvatistan",
+                "footer-text": "© 2026 Mind & Body Balance Lab | eTwinning Projesi. Tüm hakları saklıdır."
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            if (lang === 'en') {
+                document.getElementById('btn-en').className = "px-2.5 py-1 rounded bg-emerald-600 text-white font-bold transition";
+                document.getElementById('btn-tr').className = "px-2.5 py-1 rounded text-slate-300 transition";
+            } else {
+                document.getElementById('btn-tr').className = "px-2.5 py-1 rounded bg-emerald-600 text-white font-bold transition";
+                document.getElementById('btn-en').className = "px-2.5 py-1 rounded text-slate-300 transition";
+            }
+        }
+
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.getElementById('tab-' + tabId).classList.remove('hidden');
