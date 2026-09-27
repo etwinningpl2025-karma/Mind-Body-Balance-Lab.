@@ -48,7 +48,7 @@
                 <button onclick="switchTab('home')" data-translate="nav-home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
                 <button onclick="switchTab('about')" data-translate="nav-about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
                 <button onclick="switchTab('roadmap')" data-translate="nav-roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
-                <button onclick="switchTab('people')" data-translate="nav-people" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">People & Partners</button>
+                <button onclick="switchTab('partners')" data-translate="nav-partners" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Meet Our Partners</button>
                 <button onclick="switchTab('activities')" data-translate="nav-activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
                 <button onclick="switchTab('contact')" data-translate="nav-contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
             </div>
@@ -67,7 +67,7 @@
                     <p class="text-emerald-100 text-base md:text-lg" data-translate="home-desc">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
                     <div class="pt-4 flex gap-3">
                         <button onclick="switchTab('about')" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
-                        <button onclick="switchTab('people')" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
+                        <button onclick="switchTab('partners')" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
                     </div>
                 </div>
                 <div class="mt-8 md:mt-0 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
@@ -166,36 +166,60 @@
             </div>
         </div>
 
-        <!-- PEOPLE & PARTNERS TAB -->
-        <div id="tab-people" class="tab-content hidden space-y-6">
+        <!-- MEET OUR PARTNERS TAB (With 3 Cards: Schools, Teachers, Students) -->
+        <div id="tab-partners" class="tab-content hidden space-y-8">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900" data-translate="people-title">Project Team & Partner Schools</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold" data-translate="role-founder">Founder</span>
-                        <h3 class="font-bold text-slate-900">Matea Mihaljević</h3>
-                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900" data-translate="partners-main-title">Meet Our Partners</h2>
+                    <p class="text-slate-600 text-sm mt-1" data-translate="partners-main-sub">Explore the partner schools, dedicated teachers, and active student teams collaborating on the Mind & Body Balance Lab project.</p>
+                </div>
+
+                <!-- 3 Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                    
+                    <!-- 1. Meet Our School -->
+                    <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-emerald-200 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full" data-translate="card-badge-schools">Institutions</span>
+                            <h3 class="text-xl font-bold text-emerald-900 mt-3" data-translate="card-schools-title">Meet Our School</h3>
+                            <p class="text-xs text-emerald-700 mt-1" data-translate="card-schools-sub">Partner institutions hosting project activities.</p>
+                            <ul class="text-sm text-slate-700 space-y-2 mt-4">
+                                <li class="bg-white p-2.5 rounded-lg border border-emerald-100 font-medium">🏫 Haydarpaşa High School <span class="block text-xs text-slate-500 font-normal">Üsküdar, İstanbul, Türkiye</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-emerald-100 font-medium">🏫 Didim Yenihisar Anatolian High School <span class="block text-xs text-slate-500 font-normal">Didim, Türkiye</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-emerald-100 font-medium">🏫 SŠ Tina Ujevića <span class="block text-xs text-slate-500 font-normal">Vrgorac, Croatia</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold" data-translate="role-cofounder">Co-founder</span>
-                        <h3 class="font-bold text-slate-900">Mediha Tabak</h3>
-                        <p class="text-xs text-slate-500">Haydarpaşa High School, Üsküdar, Türkiye</p>
+
+                    <!-- 2. Meet Our Teachers -->
+                    <div class="bg-teal-50 border border-teal-200 p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-teal-200 text-teal-900 text-xs font-bold px-3 py-1 rounded-full" data-translate="card-badge-teachers">Coordinators</span>
+                            <h3 class="text-xl font-bold text-teal-900 mt-3" data-translate="card-teachers-title">Meet Our Teachers</h3>
+                            <p class="text-xs text-teal-700 mt-1" data-translate="card-teachers-sub">Founders, co-founders and project mentors.</p>
+                            <ul class="text-sm text-slate-700 space-y-2 mt-4">
+                                <li class="bg-white p-2.5 rounded-lg border border-teal-100 font-medium">👩‍🏫 Matea Mihaljević <span class="block text-xs text-emerald-600">Founder (SŠ Tina Ujevića)</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-teal-100 font-medium">👩‍🏫 Mediha Tabak <span class="block text-xs text-emerald-600">Co-founder (Haydarpaşa High School)</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-teal-100 font-medium">👩‍🏫 Elvan Bakırcı Pekel <span class="block text-xs text-emerald-600">Member (Didim Yenihisar Anatolian HS)</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-teal-100 font-medium">👩‍🏫 Milena Rakić & Matea Oršulić <span class="block text-xs text-emerald-600">Members (SŠ Tina Ujevića)</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
-                        <h3 class="font-bold text-slate-900">Elvan Bakırcı Pekel</h3>
-                        <p class="text-xs text-slate-500">Didim Yenihisar Anatolian High School, Didim, Türkiye</p>
+
+                    <!-- 3. Meet Our Students -->
+                    <div class="bg-blue-50 border border-blue-200 p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-blue-200 text-blue-900 text-xs font-bold px-3 py-1 rounded-full" data-translate="card-badge-students">Collaborators</span>
+                            <h3 class="text-xl font-bold text-blue-900 mt-3" data-translate="card-students-title">Meet Our Students</h3>
+                            <p class="text-xs text-blue-700 mt-1" data-translate="card-students-sub">International student research & creative teams.</p>
+                            <ul class="text-sm text-slate-700 space-y-2 mt-4">
+                                <li class="bg-white p-2.5 rounded-lg border border-blue-100 font-medium">👦👧 Research Teams <span class="block text-xs text-slate-500 font-normal">Investigating sleep, nutrition & digital habits</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-blue-100 font-medium">🎨 Creative Producers <span class="block text-xs text-slate-500 font-normal">Designing the Student Wellbeing Toolkit</span></li>
+                                <li class="bg-white p-2.5 rounded-lg border border-blue-100 font-medium">🌍 International Peers <span class="block text-xs text-slate-500 font-normal">Collaborating asynchronously across borders</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
-                        <h3 class="font-bold text-slate-900">Milena Rakić</h3>
-                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
-                    </div>
-                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" data-translate="role-member">Member</span>
-                        <h3 class="font-bold text-slate-900">Matea Oršulić</h3>
-                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -251,7 +275,7 @@
                 "nav-home": "Home",
                 "nav-about": "About & Aims",
                 "nav-roadmap": "Roadmap",
-                "nav-people": "People & Partners",
+                "nav-partners": "Meet Our Partners",
                 "nav-activities": "Activities",
                 "nav-contact": "Contact",
                 "badge-collab": "International Collaboration",
@@ -293,10 +317,17 @@
                 "p7-desc": "Produce posters, digital campaign materials, and dissemination activities.",
                 "p8-title": "Phase 8: Finalisation, evaluation and celebration",
                 "p8-desc": "Complete the toolkit, evaluate learning, share results, and close the project.",
-                "people-title": "Project Team & Partner Schools",
-                "role-founder": "Founder",
-                "role-cofounder": "Co-founder",
-                "role-member": "Member",
+                "partners-main-title": "Meet Our Partners",
+                "partners-main-sub": "Explore the partner schools, dedicated teachers, and active student teams collaborating on the Mind & Body Balance Lab project.",
+                "card-badge-schools": "Institutions",
+                "card-schools-title": "Meet Our School",
+                "card-schools-sub": "Partner institutions hosting project activities.",
+                "card-badge-teachers": "Coordinators",
+                "card-teachers-title": "Meet Our Teachers",
+                "card-teachers-sub": "Founders, co-founders and project mentors.",
+                "card-badge-students": "Collaborators",
+                "card-students-title": "Meet Our Students",
+                "card-students-sub": "International student research & creative teams.",
                 "act-title": "Project Activities & Workshop Logs",
                 "act-sub": "Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.",
                 "act1-title": "October: Mental Health Literacy & Baseline Surveys",
@@ -316,7 +347,7 @@
                 "nav-home": "Ana Sayfa",
                 "nav-about": "Hakkında & Amaçlar",
                 "nav-roadmap": "Yol Haritası",
-                "nav-people": "Ortaklar & Ekip",
+                "nav-partners": "Ortaklarımızla Tanışın",
                 "nav-activities": "Aktiviteler",
                 "nav-contact": "İletişim",
                 "badge-collab": "Uluslararası İş Birliği",
@@ -358,10 +389,17 @@
                 "p7-desc": "Posterler, dijital kampanya materyalleri üretme ve yaygınlaştırma etkinlikleri düzenleme.",
                 "p8-title": "Faz 8: Tamamlama, değerlendirme ve kutlama",
                 "p8-desc": "Araç kitini tamamlama, öğrenmeyi değerlendirme, sonuçları paylaşma ve projeyi kapatma.",
-                "people-title": "Proje Ekibi & Ortak Okullar",
-                "role-founder": "Kurucu",
-                "role-cofounder": "Kurucu Ortak",
-                "role-member": "Üye",
+                "partners-main-title": "Ortaklarımızla Tanışın",
+                "partners-main-sub": "Mind & Body Balance Lab projesinde iş birliği yapan ortak okulları, özverili öğretmenleri ve aktif öğrenci ekiplerini keşfedin.",
+                "card-badge-schools": "Kurumlar",
+                "card-schools-title": "Okulumuzla Tanışın",
+                "card-schools-sub": "Proje etkinliklerine ev sahipliği yapan ortak kurumlar.",
+                "card-badge-teachers": "Koordinatörler",
+                "card-teachers-title": "Öğretmenlerimizle Tanışın",
+                "card-teachers-sub": "Kurucular, ortak kurucular ve proje rehberleri.",
+                "card-badge-students": "İş Birlikçiler",
+                "card-students-title": "Öğrencilerimizle Tanışın",
+                "card-students-sub": "Uluslararası öğrenci araştırma ve yaratıcı ekipleri.",
                 "act-title": "Proje Aktiviteleri & Çalıştay Kayıtları",
                 "act-sub": "İş birliğine dayalı etkinliklerimiz, ortak okullar arası asenkron görevleri okul temelli pratik oturumlarla birleştirir.",
                 "act1-title": "Ekim: Ruh Sağlığı Okuryazarlığı ve Başlangıç Anketleri",
