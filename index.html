@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind & Body Balance Lab | eTwinning Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+    <!-- Terminal Header Bar -->
+    <header class="bg-slate-900 text-slate-200 px-4 py-3 flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <span class="text-xs font-mono text-slate-400">bash — etwinning-cli@mind-body-lab:~</span>
+        </div>
+        <div class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-emerald-400 border border-slate-700">
+            status: active & deployed
+        </div>
+    </header>
+
+    <!-- Navigation & Branding -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-500 shadow-sm flex items-center justify-center bg-emerald-50">
+                    <span class="font-bold text-emerald-700 text-sm">MB</span>
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-slate-900 tracking-tight block">Mind & Body Balance Lab</span>
+                    <span class="text-xs text-emerald-600 font-medium">eTwinning Project (Oct – May)</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-2 sm:mt-0" id="nav-tabs">
+                <button onclick="switchTab('home')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
+                <button onclick="switchTab('about')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
+                <button onclick="switchTab('roadmap')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
+                <button onclick="switchTab('people')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">People & Partners</button>
+                <button onclick="switchTab('activities')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
+                <button onclick="switchTab('contact')" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- HOME TAB -->
+        <div id="tab-home" class="tab-content space-y-8">
+            <div class="bg-gradient-to-r from-emerald-800 to-teal-900 rounded-2xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between">
+                <div class="max-w-xl space-y-4">
+                    <span class="bg-emerald-700/60 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">International Collaboration</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Mind & Body Balance Lab</h1>
+                    <p class="text-emerald-100 text-base md:text-lg">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
+                    <div class="pt-4 flex gap-3">
+                        <button onclick="switchTab('about')" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
+                        <button onclick="switchTab('people')" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
+                    <p class="text-xs font-mono uppercase tracking-widest text-emerald-300">Project Timeline</p>
+                    <p class="text-2xl font-bold mt-1">October – May</p>
+                    <p class="text-xs text-emerald-200 mt-2">8 Months of Active Wellbeing</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Authors & Team</h3>
+                    <p class="text-sm text-slate-600">Co-authored by Matea Mihaljević (Founder) and Mediha Tabak (Co-founder, Haydarpaşa Lisesi).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Student Wellbeing Toolkit</h3>
+                    <p class="text-sm text-slate-600">The final tangible outcome containing evidence-informed, student-friendly micro-interventions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-emerald-800 mb-2">Safe & Voluntary</h3>
+                    <p class="text-sm text-slate-600">All activities respect personal boundaries, avoiding diagnosis disclosures or private health data.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div id="tab-about" class="tab-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900">Background & Objectives</h2>
+                <p class="text-slate-700 leading-relaxed">The project “Mind & Body Balance Lab” is designed as an international collaboration between secondary schools focused on exploring the relationship between mental health and healthy lifestyle habits among adolescents. Through joint activities, students analyse how everyday routines such as sleep, nutrition, physical activity, and digital media influence emotional state, stress levels, and overall well-being.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                    <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                        <h3 class="font-bold text-emerald-900 text-lg mb-2">Overall Aim</h3>
+                        <p class="text-sm text-emerald-800">To develop students’ awareness, knowledge, and skills for protecting mental health through the adoption of healthy lifestyle habits, strengthening emotional and social competences, and reducing stigma.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
+                        <h3 class="font-bold text-teal-900 text-lg mb-2">Specific Aims</h3>
+                        <ul class="text-sm text-teal-800 space-y-2 list-disc list-inside">
+                            <li>Distinguish scientific information from myths regarding mental health.</li>
+                            <li>Analyze connection between sleep, nutrition, physical activity, and well-being.</li>
+                            <li>Apply stress-management strategies and micro-interventions.</li>
+                            <li>Collaborate in international teams using digital tools.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROADMAP TAB -->
+        <div id="tab-roadmap" class="tab-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">8-Phase Project Roadmap (October → May)</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">October</span>
+                        <h3 class="font-bold text-slate-800">Phase 1: Project launch and mental health literacy</h3>
+                        <p class="text-sm text-slate-600">Meet partners, complete baseline surveys, explore mental health concepts and myths.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">November</span>
+                        <h3 class="font-bold text-slate-800">Phase 2: Sleep and mental wellbeing</h3>
+                        <p class="text-sm text-slate-600">Investigate sleep, concentration, and mood; develop healthy sleep habits.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">December</span>
+                        <h3 class="font-bold text-slate-800">Phase 3: Nutrition and physical activity</h3>
+                        <p class="text-sm text-slate-600">Explore lifestyle and wellbeing; create practical healthy habit resources.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">January</span>
+                        <h3 class="font-bold text-slate-800">Phase 4: Stress management and emotional regulation</h3>
+                        <p class="text-sm text-slate-600">Learn and practise micro-interventions, emotional awareness, and coping strategies.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">February</span>
+                        <h3 class="font-bold text-slate-800">Phase 5: Digital balance and social wellbeing</h3>
+                        <p class="text-sm text-slate-600">Reflect on digital habits, social connection, and healthy boundaries.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">March</span>
+                        <h3 class="font-bold text-slate-800">Phase 6: International teamwork and toolkit creation</h3>
+                        <p class="text-sm text-slate-600">Combine partner contributions and draft the Student Wellbeing Toolkit.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">April</span>
+                        <h3 class="font-bold text-slate-800">Phase 7: Mental health awareness campaign</h3>
+                        <p class="text-sm text-slate-600">Produce posters, digital campaign materials, and dissemination activities.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">May</span>
+                        <h3 class="font-bold text-slate-800">Phase 8: Finalisation, evaluation and celebration</h3>
+                        <p class="text-sm text-slate-600">Complete the toolkit, evaluate learning, share results, and close the project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PEOPLE & PARTNERS TAB -->
+        <div id="tab-people" class="tab-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900">Project Team & Partner Schools</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                        <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Founder</span>
+                        <h3 class="font-bold text-slate-900">Matea Mihaljević</h3>
+                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
+                    </div>
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                        <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold">Co-founder</span>
+                        <h3 class="font-bold text-slate-900">Mediha Tabak</h3>
+                        <p class="text-xs text-slate-500">Haydarpaşa Lisesi, Üsküdar, Türkiye</p>
+                    </div>
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <h3 class="font-bold text-slate-900">Elvan Bakırcı Pekel</h3>
+                        <p class="text-xs text-slate-500">Didim Yenihisar Anadolu Lisesi, Didim, Türkiye</p>
+                    </div>
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <h3 class="font-bold text-slate-900">Milena Rakić</h3>
+                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
+                    </div>
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Member</span>
+                        <h3 class="font-bold text-slate-900">Matea Oršulić</h3>
+                        <p class="text-xs text-slate-500">SŠ Tina Ujevića, Vrgorac, Croatia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIVITIES TAB -->
+        <div id="tab-activities" class="tab-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900">Project Activities & Workshop Logs</h2>
+                <p class="text-slate-600">Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.</p>
+                <div class="space-y-4">
+                    <div class="p-4 border rounded-xl bg-slate-50">
+                        <h3 class="font-bold text-emerald-800">October: Mental Health Literacy & Baseline Surveys</h3>
+                        <p class="text-sm text-slate-600 mt-1">Online welcome meetings, baseline surveys, and international myth-or-fact collaborative wall (Padlet).</p>
+                    </div>
+                    <div class="p-4 border rounded-xl bg-slate-50">
+                        <h3 class="font-bold text-emerald-800">November: Sleep & Mental Wellbeing</h3>
+                        <p class="text-sm text-slate-600 mt-1">Researching sleep science, creating international sleep-habits infographics and toolkits.</p>
+                    </div>
+                    <div class="p-4 border rounded-xl bg-slate-50">
+                        <h3 class="font-bold text-emerald-800">December: Nutrition & Physical Activity</h3>
+                        <p class="text-sm text-slate-600 mt-1">Practical movement habits, avoiding calorie counting, and designing digital infographics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT TAB -->
+        <div id="tab-contact" class="tab-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6 max-w-2xl mx-auto text-center">
+                <h2 class="text-2xl font-bold text-slate-900">Contact & Project Channels</h2>
+                <p class="text-slate-600">Get in touch with the project coordinators or explore our partner schools.</p>
+                <div class="p-6 bg-emerald-50 rounded-xl border border-emerald-100 inline-block w-full">
+                    <p class="text-sm font-semibold text-emerald-900">Official eTwinning Contact Email:</p>
+                    <a href="mailto:etwinninghpl2025@gmail.com" class="text-emerald-700 font-bold text-lg hover:underline block mt-1">etwinninghpl2025@gmail.com</a>
+                </div>
+                <p class="text-xs text-slate-500">Haydarpaşa Lisesi — Üsküdar, İstanbul / SŠ Tina Ujevića — Vrgorac, Croatia</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">
+            © 2026 Mind & Body Balance Lab | eTwinning Project. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('text-slate-600', 'hover:bg-slate-100');
+            });
+            event.currentTarget.classList.add('bg-emerald-600', 'text-white');
+            event.currentTarget.classList.remove('text-slate-600', 'hover:bg-slate-100');
+        }
+    </script>
+</body>
+</html>
