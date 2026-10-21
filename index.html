@@ -45,12 +45,12 @@
                 </div>
             </div>
             <div class="flex flex-wrap gap-2 mt-2 sm:mt-0" id="nav-tabs">
-                <button onclick="switchTab('home')" data-translate="nav-home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
-                <button onclick="switchTab('about')" data-translate="nav-about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
-                <button onclick="switchTab('roadmap')" data-translate="nav-roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
-                <button onclick="switchTab('partners')" data-translate="nav-partners" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Meet Our Partners</button>
-                <button onclick="switchTab('activities')" data-translate="nav-activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
-                <button onclick="switchTab('contact')" data-translate="nav-contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
+                <button onclick="switchTab('home', this)" data-translate="nav-home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition">Home</button>
+                <button onclick="switchTab('about', this)" data-translate="nav-about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
+                <button onclick="switchTab('roadmap', this)" data-translate="nav-roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
+                <button onclick="switchTab('partners', this)" data-translate="nav-partners" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Meet Our Partners</button>
+                <button onclick="switchTab('activities', this)" data-translate="nav-activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
+                <button onclick="switchTab('contact', this)" data-translate="nav-contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
             </div>
         </div>
     </nav>
@@ -58,9 +58,9 @@
     <!-- Main Container -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
-        <!-- Official Banner Section -->
+        <!-- Official Banner Section (Yeni Banner Eklendi) -->
         <div class="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
-            <img src="banner.png" alt="Mind & Body Balance Lab Banner" class="w-full h-auto object-cover">
+            <img src="Zihin ve Beden Denge Laboratuvarı.png" alt="Mind & Body Balance Lab Banner" class="w-full h-auto object-cover">
         </div>
 
         <!-- HOME TAB -->
@@ -71,8 +71,8 @@
                     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Mind & Body Balance Lab</h1>
                     <p class="text-emerald-100 text-base md:text-lg" data-translate="home-desc">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
                     <div class="pt-4 flex gap-3">
-                        <button onclick="switchTab('about')" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
-                        <button onclick="switchTab('partners')" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
+                        <button onclick="switchTab('about', document.querySelectorAll('.tab-btn')[1])" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
+                        <button onclick="switchTab('partners', document.querySelectorAll('.tab-btn')[3])" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
                     </div>
                 </div>
                 <div class="mt-8 md:mt-0 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
@@ -199,4 +199,82 @@
         <!-- ROADMAP TAB -->
         <div id="tab-roadmap" class="tab-content hidden space-y-6">
             <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h
+                <h2 class="text-2xl font-bold text-slate-900 mb-6" data-translate="roadmap-title">8-Phase Project Roadmap (October → May)</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">October</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p1-title">Phase 1: Project launch and mental health literacy</h3>
+                        <p class="text-sm text-slate-600" data-translate="p1-desc">Meet partners, complete baseline surveys, explore mental health concepts and myths.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">November</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p2-title">Phase 2: Sleep and mental wellbeing</h3>
+                        <p class="text-sm text-slate-600" data-translate="p2-desc">Investigate sleep, concentration, and mood; develop healthy sleep habits.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">December</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p3-title">Phase 3: Nutrition and physical activity</h3>
+                        <p class="text-sm text-slate-600" data-translate="p3-desc">Explore lifestyle and wellbeing; create practical healthy habit resources.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">January</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p4-title">Phase 4: Stress management and emotional regulation</h3>
+                        <p class="text-sm text-slate-600" data-translate="p4-desc">Learn and practise micro-interventions, emotional awareness, and coping strategies.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">February</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p5-title">Phase 5: Digital balance and social wellbeing</h3>
+                        <p class="text-sm text-slate-600" data-translate="p5-desc">Reflect on digital habits, social connection, and healthy boundaries.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">March</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p6-title">Phase 6: International teamwork and toolkit creation</h3>
+                        <p class="text-sm text-slate-600" data-translate="p6-desc">Combine partner contributions and draft the Student Wellbeing Toolkit.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">April</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p7-title">Phase 7: Mental health awareness campaign</h3>
+                        <p class="text-sm text-slate-600" data-translate="p7-desc">Produce posters, digital campaign materials, and dissemination activities.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-4 py-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">May</span>
+                        <h3 class="font-bold text-slate-800" data-translate="p8-title">Phase 8: Finalisation, evaluation and celebration</h3>
+                        <p class="text-sm text-slate-600" data-translate="p8-desc">Complete the toolkit, evaluate learning, share results, and close the project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEET OUR PARTNERS TAB -->
+        <div id="tab-partners" class="tab-content hidden space-y-8">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900" data-translate="partners-main-title">Meet Our Partners</h2>
+                    <p class="text-slate-600 text-sm mt-1" data-translate="partners-main-sub">Explore the partner schools, dedicated teachers, and active student teams collaborating on the Mind & Body Balance Lab project.</p>
+                </div>
+
+                <!-- 3 Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                    
+                    <!-- 1. Meet Our School (With Padlet) -->
+                    <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-emerald-200 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full" data-translate="card-badge-schools">Institutions</span>
+                            <h3 class="text-xl font-bold text-emerald-900 mt-3" data-translate="card-schools-title">Meet Our School</h3>
+                            <p class="text-xs text-emerald-700 mt-1" data-translate="card-schools-sub">Partner institutions hosting project activities.</p>
+                            
+                            <div class="mt-4 rounded-xl overflow-hidden border border-emerald-200 shadow-inner bg-white">
+                                <div class="padlet-embed" style="border:0;border-radius:0;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
+                                    <p style="padding:0;margin:0">
+                                        <iframe src="https://padlet.com/embed/s023ufr775lhmkxjflu3" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:350px;display:block;padding:0;margin:0"></iframe>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Meet Our Teachers (With Padlet) -->
+                    <div class="bg-teal-50 border border-teal-200 p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-teal-200 text-teal-900 text-xs font-bold px-3 py-1 rounded-full" data-translate="card-badge-teachers">Coordinators</span>
+                            <h3 class="text-xl font-
