@@ -60,7 +60,7 @@
         
         <!-- Official Banner Section -->
         <div class="w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
-            <img src="Zihin ve Beden Denge Laboratuvarı.png" alt="Mind & Body Balance Lab Banner" class="w-full h-auto object-cover">
+            <img src="Zihin ve Beden Denge Laboratuvarı.png" alt="Mind & Body Balance Lab Banner" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x400/065f46/ffffff?text=Mind+%26+Body+Balance+Lab';">
         </div>
 
         <!-- HOME TAB -->
@@ -266,7 +266,8 @@
                 <h2 class="text-2xl font-bold text-slate-900" data-translate="activities-title">Project Activities & Outputs</h2>
                 <p class="text-slate-600 text-sm" data-translate="activities-sub">Digital tools, collaborative board games, surveys, and student-led creative workshops.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <!-- Card 1: Padlet 1 -->
                     <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-4 flex flex-col justify-between">
                         <div class="space-y-2">
                             <h3 class="font-bold text-emerald-800 text-base" data-translate="act1-title">Digital Surveys & Padlets</h3>
@@ -274,14 +275,32 @@
                         </div>
                         <div class="pt-2">
                             <a href="https://padlet.com/medihatbk/october-mental-health-myth-or-fact-s0243jr3shtuvgmarilh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-lg shadow transition gap-2">
-                                <span>🌐</span> <span data-translate="padlet-btn">October Padlet: Myth or Fact</span>
+                                <span>🌐</span> <span data-translate="padlet-btn-1">October Padlet: Myth or Fact</span>
                             </a>
                         </div>
                     </div>
+
+                    <!-- Card 2: Padlet 2 (Collaborative Products) -->
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-4 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-0.5 rounded" data-translate="badge-collab-product">Collaborative Product</span>
+                            <h3 class="font-bold text-emerald-800 text-base mt-2" data-translate="act4-title">Mind & Body Atlas of Partner Countries</h3>
+                            <p class="text-sm text-slate-600" data-translate="act4-desc">Joint international showcase mapping adolescent well-being highlights across partner regions.</p>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://padlet.com/medihatbk/mind-body-atlas-of-partner-countries-s024puuk7ii5g92nw9bm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold rounded-lg shadow transition gap-2">
+                                <span>🗺️</span> <span data-translate="padlet-btn-2">View Partner Countries Atlas</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
                     <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
                         <h3 class="font-bold text-emerald-800 text-base" data-translate="act2-title">Wellbeing Micro-Challenges</h3>
                         <p class="text-sm text-slate-600" data-translate="act2-desc">7-day screen reduction, hydration tracking, and guided breathing exercises.</p>
                     </div>
+
+                    <!-- Card 4 -->
                     <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
                         <h3 class="font-bold text-emerald-800 text-base" data-translate="act3-title">Student Wellbeing Toolkit</h3>
                         <p class="text-sm text-slate-600" data-translate="act3-desc">The ultimate collaborative e-book containing student tips and healthy recipes.</p>
@@ -373,7 +392,11 @@
                 "activities-sub": "Digital tools, collaborative board games, surveys, and student-led creative workshops.",
                 "act1-title": "Digital Surveys & Padlets",
                 "act1-desc": "Safe international feedback collection on daily habits and stress triggers.",
-                "padlet-btn": "October Padlet: Myth or Fact",
+                "padlet-btn-1": "October Padlet: Myth or Fact",
+                "badge-collab-product": "Collaborative Product",
+                "act4-title": "Mind & Body Atlas of Partner Countries",
+                "act4-desc": "Joint international showcase mapping adolescent well-being highlights across partner regions.",
+                "padlet-btn-2": "View Partner Countries Atlas",
                 "act2-title": "Wellbeing Micro-Challenges",
                 "act2-desc": "7-day screen reduction, hydration tracking, and guided breathing exercises.",
                 "act3-title": "Student Wellbeing Toolkit",
@@ -440,13 +463,17 @@
                 "activities-sub": "Dijital araçlar, ortak masa oyunları, anketler ve öğrenci liderliğindeki yaratıcı atölyeler.",
                 "act1-title": "Dijital Anketler ve Padletler",
                 "act1-desc": "Günlük alışkanlıklar ve stres tetikleyicileri üzerine güvenli uluslararası geri bildirim toplama.",
-                "padlet-btn": "Ekim Padleti: Mit veya Gerçek",
+                "padlet-btn-1": "Ekim Padleti: Mit veya Gerçek",
+                "badge-collab-product": "Ortak Ürün",
+                "act4-title": "Mind & Body Atlas of Partner Countries",
+                "act4-desc": "Ortak bölgelerdeki ergen refahı öne çıkanlarını haritalandıran ortak uluslararası vitrin.",
+                "padlet-btn-2": "Ortak Ülkeler Atlasını Görüntüle",
                 "act2-title": "İyilik Hali Mikro Meydan Okumaları",
                 "act2-desc": "7 günlük ekran azaltma, su içme takibi ve rehberli nefes egzersizleri.",
                 "act3-title": "Öğrenci İyilik Hali Araç Kutusu",
                 "act3-desc": "Öğrenci ipuçları ve sağlıklı tarifler içeren nihai ortak e-kitap.",
                 "contact-title": "İletişim ve Haberleşme",
-                "contact-sub": "Proje koordinatörleriyle iletişime geçin veya okul portallarımızı ziyaret edin.",
+                "contact-sub": "Proje koordinatörleriyle iletişime geçin veya okul portallarımızı ziyaret olun.",
                 "contact-info-1": "📍 <strong>Haydarpaşa Lisesi:</strong> Üsküdar, İstanbul, Türkiye",
                 "contact-info-2": "✉️ <strong>Kurucu Ortak & Koordinatör:</strong> Mediha Tabak",
                 "contact-info-3": "🌐 <strong>Platform:</strong> European School Education Platform (ESEP) / eTwinning"
