@@ -44,13 +44,13 @@
                     <span class="text-xs text-emerald-600 font-medium" data-translate="sub-title">eTwinning Project (Oct – May)</span>
                 </div>
             </div>
-            <div class="flex flex-wrap gap-2 mt-2 sm:mt-0" id="nav-tabs">
-                <button onclick="switchTab('home', event)" data-translate="nav-home" id="tab-btn-home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition shadow-sm">Home</button>
-                <button onclick="switchTab('about', event)" data-translate="nav-about" id="tab-btn-about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
-                <button onclick="switchTab('roadmap', event)" data-translate="nav-roadmap" id="tab-btn-roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
-                <button onclick="switchTab('partners', event)" data-translate="nav-partners" id="tab-btn-partners" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Meet Our Partners</button>
-                <button onclick="switchTab('activities', event)" data-translate="nav-activities" id="tab-btn-activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
-                <button onclick="switchTab('contact', event)" data-translate="nav-contact" id="tab-btn-contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
+            <div class="flex flex-wrap gap-2 mt-2 sm:mt-0">
+                <button onclick="switchTab('home')" data-tab="home" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-600 text-white transition shadow-sm">Home</button>
+                <button onclick="switchTab('about')" data-tab="about" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">About & Aims</button>
+                <button onclick="switchTab('roadmap')" data-tab="roadmap" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Roadmap</button>
+                <button onclick="switchTab('partners')" data-tab="partners" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Meet Our Partners</button>
+                <button onclick="switchTab('activities')" data-tab="activities" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Activities</button>
+                <button onclick="switchTab('contact')" data-tab="contact" class="tab-btn px-3 py-1.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-100 transition">Contact</button>
             </div>
         </div>
     </nav>
@@ -71,8 +71,8 @@
                     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Mind & Body Balance Lab</h1>
                     <p class="text-emerald-100 text-base md:text-lg" data-translate="home-desc">Exploring the relationship between mental health, emotional wellbeing, and healthy lifestyle habits among adolescents through research, digital tools, and creative production.</p>
                     <div class="pt-4 flex gap-3">
-                        <button onclick="switchTab('about', event)" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
-                        <button onclick="switchTab('partners', event)" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
+                        <button onclick="switchTab('about')" data-translate="btn-explore" class="bg-white text-emerald-900 font-semibold px-5 py-2.5 rounded-xl shadow hover:bg-emerald-50 transition">Explore Project</button>
+                        <button onclick="switchTab('partners')" data-translate="btn-partners" class="border border-emerald-400 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-emerald-700/40 transition">Meet Partners</button>
                     </div>
                 </div>
                 <div class="mt-8 md:mt-0 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
@@ -106,107 +106,20 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-                    <!-- 1. Matea Mihaljević -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">Founder / Kurucu</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Matea Mihaljević</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">SŠ Tina Ujevića</p>
-                            <p class="text-xs text-slate-500 mt-1">🇭🇷 Vrgorac, Hırvatistan</p>
-                        </div>
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">Founder / Kurucu</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">Matea Mihaljević</h3>
+                        <p class="text-sm font-medium text-slate-700">SŠ Tina Ujevića</p>
+                        <p class="text-xs text-slate-500">🇭🇷 Vrgorac, Hırvatistan</p>
                     </div>
-                    <!-- 2. Mediha Tabak -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Co-founder / Kurucu Ortak</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Mediha Tabak</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">Haydarpaşa High School</p>
-                            <p class="text-xs text-slate-500 mt-1">🇹🇷 Üsküdar, Türkiye</p>
-                        </div>
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Co-founder / Kurucu Ortak</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">Mediha Tabak</h3>
+                        <p class="text-sm font-medium text-slate-700">Haydarpaşa High School</p>
+                        <p class="text-xs text-slate-500">🇹🇷 Üsküdar, Türkiye</p>
                     </div>
-                    <!-- 3. Elvan Bakırcı Pekel -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Member / Üye</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Elvan Bakırcı Pekel</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">Didim Yenihisar Anatolian High School</p>
-                            <p class="text-xs text-slate-500 mt-1">🇹🇷 Didim, Türkiye</p>
-                        </div>
-                    </div>
-                    <!-- 4. Milena Rakić -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Member / Üye</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Milena Rakić</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">SŠ Tina Ujevića, Vrgorac</p>
-                            <p class="text-xs text-slate-500 mt-1">🇭🇷 Vrgorac, Croatia</p>
-                        </div>
-                    </div>
-                    <!-- 5. Laila Vevere -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Member / Üye</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Laila Vevere</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">Zemgales vidusskola</p>
-                            <p class="text-xs text-slate-500 mt-1">🇱🇻 Tukuma Novads, Latvia</p>
-                        </div>
-                    </div>
-                    <!-- 6. Matea Oršulić -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition">
-                        <div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Member / Üye</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-3">Matea Oršulić</h3>
-                            <p class="text-sm font-medium text-slate-700 mt-1">SŠ Tina Ujevića, Vrgorac</p>
-                            <p class="text-xs text-slate-500 mt-1">🇭🇷 Vrgorac, Croatia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ABOUT TAB -->
-        <div id="tab-about" class="tab-content hidden space-y-6">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900" data-translate="about-title">Background & Objectives</h2>
-                <p class="text-slate-700 leading-relaxed" data-translate="about-text">The project “Mind & Body Balance Lab” is designed as an international collaboration between secondary schools focused on exploring the relationship between mental health and healthy lifestyle habits among adolescents.</p>
-            </div>
-        </div>
-
-        <!-- ROADMAP TAB -->
-        <div id="tab-roadmap" class="tab-content hidden space-y-6">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6" data-translate="roadmap-title">8-Phase Project Roadmap (October → May)</h2>
-            </div>
-        </div>
-
-        <!-- MEET OUR PARTNERS TAB -->
-        <div id="tab-partners" class="tab-content hidden space-y-8">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900" data-translate="partners-main-title">Meet Our Partners</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-                    <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl shadow-sm">
-                        <iframe src="https://padlet.com/embed/s023ufr775lhmkxjflu3" frameborder="0" style="width:100%;height:350px;display:block;"></iframe>
-                    </div>
-                    <div class="bg-teal-50 border border-teal-200 p-6 rounded-2xl shadow-sm">
-                        <iframe src="https://padlet.com/embed/s023ufvvtyknupgmqoaj" frameborder="0" style="width:100%;height:350px;display:block;"></iframe>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-200 p-6 rounded-2xl shadow-sm">
-                        <iframe src="https://padlet.com/embed/s023uak1tc3zvndl8jkg" frameborder="0" style="width:100%;height:350px;display:block;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ACTIVITIES TAB -->
-        <div id="tab-activities" class="tab-content hidden space-y-6">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <h2 class="text-2xl font-bold text-slate-900" data-translate="act-title">Project Activities & Workshop Logs</h2>
-                <p class="text-slate-600" data-translate="act-sub">Our collaborative activities combine asynchronous tasks across partner schools with practical school-based sessions.</p>
-                
-                <!-- Banner Görseli -->
-                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 my-6 bg-white">
-                    <img src="Zihin ve Beden Denge Laboratuvarı.png" alt="Mind & Body Balance Lab Activities" class="w-full h-auto object-cover">
-                </div>
-
-                <!-- 2 Özel Padlet Kartı -->
-                <div class="grid grid-cols-1 md:
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Member / Üye</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">Elvan Bakırcı Pekel</h3>
+                        <p class="text-sm font-medium text-slate-700">Didim Yenihisar Anatolian High School</p>
+                        <p class="text-xs text-
